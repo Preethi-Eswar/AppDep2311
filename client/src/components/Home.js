@@ -23,7 +23,7 @@ let reqOptions = {
   body:dataToSend,
 }
 
-      let JSONData = await fetch("http://localhost:1234/deleteProfile",reqOptions);
+      let JSONData = await fetch("/deleteProfile",reqOptions);
       let JSData = await JSONData.json();
       alert(JSData.msg);
 
@@ -40,7 +40,7 @@ let reqOptions = {
         <TopNavigation/>
         <h1>Home</h1>
         <h3>{`${storeObj.loginReducer.userDetails.firstName}${storeObj.loginReducer.userDetails.lastName}`}</h3>
-        <img src ={`http://localhost:1234/${storeObj.loginReducer.userDetails.profilePic}`}/>
+        <img src ={`/${storeObj.loginReducer.userDetails.profilePic}`}/>
 
         <button type="button" onClick={()=>{
           deleteAccount();

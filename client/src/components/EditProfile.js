@@ -22,7 +22,7 @@ function EditProfile() {
   ageInputRef.current.value = storeObj.loginReducer.userDetails.age;
   emailInputRef.current.value = storeObj.loginReducer.userDetails.email;
   mobileInputRef.current.value = storeObj.loginReducer.userDetails.mobile;
-  setProfilePic(`http://localhost:1234/${storeObj.loginReducer.userDetails.profilePic}`);
+  setProfilePic(`/${storeObj.loginReducer.userDetails.profilePic}`);
  
   },[]);
 
@@ -77,7 +77,7 @@ let sendUpdatedProfilePic = async (req,res)=>{
     body:dataToSend,
   }
 
-  let JSONData = await fetch("http://localhost:1234/updateProfile",reqOptions);
+  let JSONData = await fetch("/updateProfile",reqOptions);
   let JSData = await JSONData.json();
 
   console.log(JSData);

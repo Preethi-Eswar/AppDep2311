@@ -26,7 +26,7 @@ function Login() {
         method:"POST",
         body:dataToSend,
       };
-let JSONData = await fetch("http://localhost:1234/loginWithToken",reqOptions);
+let JSONData = await fetch("/loginWithToken",reqOptions);
 let JSData = await JSONData.json();
 if(JSData.status == "success"){
 
@@ -57,7 +57,7 @@ console.log(JSData);
         body:dataToSend,
     }
 
-    let JSONData = await fetch("http://localhost:1234/login",reqOptions);
+    let JSONData = await fetch("/login",reqOptions);
     let JSData = await JSONData.json();
     if(JSData.status == "success"){
 
@@ -85,7 +85,7 @@ console.log(JSData);
             body:dataToSend,
         }
 
-        let JSONData = await fetch("http://localhost:1234/login",reqOptions);
+        let JSONData = await fetch("/login",reqOptions);
         let JSData = await JSONData.json();
         if(JSData.status == "success"){
 

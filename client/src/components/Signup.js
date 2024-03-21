@@ -37,7 +37,7 @@ function Signup() {
             headers:myHeader,
         };
 
-        let JSONData = await fetch("http://localhost:1234/signup",reqOptions);
+        let JSONData = await fetch("/signup",reqOptions);
         let JSData = await JSONData.json();
         console.log(JSData);
     };
@@ -60,7 +60,7 @@ function Signup() {
             body:dataToSend,
             headers :myHeader,
         };
-        let JSONData = await fetch("http://localhost:1234/signup",reqOptions);
+        let JSONData = await fetch("/signup",reqOptions);
         let JSData = await JSONData.json();
         console.log(JSData);
      };
@@ -85,7 +85,7 @@ function Signup() {
             method:"POST",
             body:dataToSend,
         };
-        let JSONData = await fetch("http://localhost:1234/signup",reqOptions);
+        let JSONData = await fetch("/signup",reqOptions);
         let JSData = await JSONData.json();
         alert(JSData.msg);
         console.log(JSData);
