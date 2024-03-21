@@ -214,7 +214,7 @@ console.log(`Listening to port ${process.env.port}`);
 let connectToMDB = async (req,res)=>{
     try{
      
-     await   mongoose.connect(process.env.mdburl);
+     await mongoose.connect(process.env.mdburl);
        
    console.log("Successfully connected to MDB");
     }
