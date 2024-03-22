@@ -211,7 +211,7 @@ app.delete("/deleteProfile",upload.none(),async(req,res)=>{
 app.listen(process.env.port,()=>{
 console.log(`Listening to port ${process.env.port}`);
 });
-let connectToMDB = async (req,res)=>{
+let connectToMDB = async ()=>{
     try{
      
      await mongoose.connect(process.env.mdburl);
